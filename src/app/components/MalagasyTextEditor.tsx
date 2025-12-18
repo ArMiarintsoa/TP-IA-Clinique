@@ -206,18 +206,19 @@ export function MalagasyTextEditor() {
   };
 
   return (
-    <Box sx={{ p: 3, maxWidth: 1400, mx: 'auto' }}>
-      <Typography variant="h4" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+    <Box sx={{ p: 3, maxWidth: 1400, mx: 'auto'}}>
+      <Typography variant="h4" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 25 }}>
         <Psychology color="primary" />
         Éditeur de Texte Intelligent - Langue Malgache
+         <Psychology color="primary" />
       </Typography>
-      
+       
       <Grid container spacing={3}>
         {/* Éditeur principal */}
         <Grid item xs={12} md={8}>
           <Paper elevation={3} sx={{ p: 2 }}>
             <Stack spacing={2}>
-              <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+              <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width:600}}>
                 <Typography variant="h6">Zone d'édition</Typography>
                 <Stack direction="row" spacing={1}>
                   <Tooltip title="Synthèse vocale">
@@ -233,7 +234,7 @@ export function MalagasyTextEditor() {
                 </Stack>
               </Box>
 
-              <Box onContextMenu={handleContextMenu} sx={{ position: 'relative' }}>
+              <Box onContextMenu={handleContextMenu} sx={{ position: 'relative', width:600 }}>
                 <TextField
                   inputRef={textAreaRef}
                   multiline
@@ -307,15 +308,15 @@ export function MalagasyTextEditor() {
         </Grid>
 
         {/* Panneau latéral */}
-        <Grid item xs={12} md={4}>
-          <Paper elevation={3} sx={{ p: 2, height: '100%' }}>
+        <Grid item xs={12} md={4} sx={{width:500}}>
+          <Paper elevation={3} sx={{ p: 2, height: '100%', width: '133%'}}>
             <Tabs value={currentTab} onChange={(_, v) => setCurrentTab(v)}>
               <Tab label="Analyse" icon={<Spellcheck />} iconPosition="start" />
               <Tab label="NER" icon={<Lightbulb />} iconPosition="start" />
               <Tab label="Chatbot" icon={<SmartToy />} iconPosition="start" />
             </Tabs>
 
-            <Box sx={{ mt: 2 }}>
+            <Box sx={{ mt: 2 } }>
               {/* Onglet Analyse */}
               {currentTab === 0 && (
                 <Stack spacing={2}>
