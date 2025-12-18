@@ -44,6 +44,7 @@ import {
   malagasyDictionary,
 } from '../utils/malagasyDictionary';
 import { KnowledgeGraphViewer } from './KnowledgeGraphViewer';
+import axios from "axios";
 
 interface SpellingError {
   word: string;
@@ -112,7 +113,7 @@ export function MalagasyTextEditor() {
   };
 
   // Autocomplétion
-  const handleTextChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+  const handleTextChange = async (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     const newText = e.target.value;
     setText(newText);
     
@@ -123,6 +124,12 @@ export function MalagasyTextEditor() {
     const currentWord = words[words.length - 1];
     
     if (currentWord.length > 0) {
+      console.log(newText)
+      const result = await axios.post('https://tp-ia-clinique.onrender.com/text/autocomplete', newText, {
+        headers: {
+          'Content-Type': 'text/plain'
+        }
+      })
       const predictions = predictNextWord(currentWord);
       setSuggestions(predictions);
     } else {
