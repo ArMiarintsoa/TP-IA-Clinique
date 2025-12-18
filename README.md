@@ -54,8 +54,13 @@ Réalisé au sein de ISPM - Madagascar (www.ispm-edu.com)
 * **Branche Scraping** : Code scraping et les fichiers de mots Malagasy (teny_malagasy.csv, malagasy_corpus.txt).
 * **Branche editor-gasy-front** : Code front-end.
 
+Lien front : https://lustrous-daifuku-13681d.netlify.app/
+Lien back : https://tp-ia-clinique.onrender.com
+Lien video : https://drive.google.com/file/d/1UZWS9jAbM2q8jWSju3ckl6dgXcnmBKMy/view?usp=sharing
+
 ### **4\. Bibliographie**
 *Source de text:*
 * https://baiboly.katolika.org
 * https://www.tiatanindrazana.mg/
+  
 
