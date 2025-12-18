@@ -1,6 +1,6 @@
-# **Rapport de Projet \- Éditeur Intelligent **
+# **Rapport de Projet \- Éditeur Intelligent**
 
-## **Examen TP Intelligence Artificielle **
+## **Examen TP Intelligence Artificielle**
 
 Réalisé au sein de ISPM - Madagascar (www.ispm-edu.com)
 
