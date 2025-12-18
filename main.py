@@ -1,15 +1,10 @@
-from scraper.fetcher import fetch_html
-from scraper.parser import parse_products
-from scraper.saver import save_to_csv
+from sites.baiboly.baiboly_word import run_scraping
+from sites.gazety.tiatanindrazana import run_scraping as run_gazety_scraping
 
 def main():
-    url = "https://example.com/products"
-    
-    html = fetch_html(url)
-    products = parse_products(html)
-    save_to_csv(products)
+    # run_scraping()
+    run_gazety_scraping()
 
-    print(f"{len(products)} produits enregistrés")
 
 if __name__ == "__main__":
     main()
